@@ -29,12 +29,15 @@ Route::get('/about-us',function(){
 Route::get('/contact-us',function(){
     return view('frontend.contact');
 });
+
 Route::resource('contact', ContactController::class);
 ///end frontend routes///
 Route::get('/admin',[AdminController::class,'index']);
 Route::post('admin/auth',[AdminController::class,'auth'])->name('admin.login');
 Route::group(['middleware'=>'admin_auth','prefix'=>'admin'],function(){
     Route::get('dashboard',[AdminController::class,'show']);
+    Route::get('/contact/enquiry',[CategoryController::class,'getcontactenquiry'])->name('contact.enquiry');
+    Route::delete('/contact/delete/{id}',[CategoryController::class,'deletecontactenquiry'])->name('contact.destroy');
     Route::get('category/status/{type}/{id}',[CategoryController::class,'status']);
 Route::resource('category', CategoryController::class);
 

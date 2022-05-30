@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
@@ -68,6 +69,17 @@ class CategoryController extends Controller
     public function show(Category $category)
     {
         //
+    }
+
+    public function getcontactenquiry(){
+    $data=Contact::latest()->get();
+    return view('admin.contact.contact',compact('data'));
+    }
+    public function deletecontactenquiry($id){
+  $data=Contact::findOrFail($id);
+  $data->delete();
+  return redirect()->back();
+
     }
 
     /**
