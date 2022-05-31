@@ -6,6 +6,7 @@ use App\Http\Controllers\CouponController;
 use App\Http\Controllers\SizeController;
 use App\Http\Controllers\ColorController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,14 +30,22 @@ Route::get('/about-us',function(){
 Route::get('/contact-us',function(){
     return view('frontend.contact');
 });
+Route::get('/privacy-policy',function(){
+    return view('frontend.privacy');
+});
 
 Route::resource('contact', ContactController::class);
+Route::get('/category/{id}',[FrontendController::class,'getproductbycat'])->name('product.category');
+Route::post('/product/enquiry',[FrontendController::class,'storeenquiry'])->name('product.enquiry');
+Route::get('/product/detail/{id}',[FrontendController::class,'product_detail'])->name('product.detail');
 ///end frontend routes///
 Route::get('/admin',[AdminController::class,'index']);
 Route::post('admin/auth',[AdminController::class,'auth'])->name('admin.login');
 Route::group(['middleware'=>'admin_auth','prefix'=>'admin'],function(){
     Route::get('dashboard',[AdminController::class,'show']);
     Route::get('/contact/enquiry',[CategoryController::class,'getcontactenquiry'])->name('contact.enquiry');
+    Route::get('/product/enquiry',[CategoryController::class,'getproductenquiry'])->name('products.enquiry');
+    Route::delete('/product/delete/enquiry/{id}',[CategoryController::class,'deleteproductenquiry'])->name('product_enquiry.destroy');
     Route::delete('/contact/delete/{id}',[CategoryController::class,'deletecontactenquiry'])->name('contact.destroy');
     Route::get('category/status/{type}/{id}',[CategoryController::class,'status']);
 Route::resource('category', CategoryController::class);

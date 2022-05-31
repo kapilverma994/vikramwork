@@ -1,17 +1,10 @@
 @extends('admin.layouts.master_layout')
-@section('title', 'Coupons')
+@section('title', 'Product')
 
 @section('admin_content')
+@section('type','Product')
 
 <div class="container-fluid" id="container-wrapper">
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-      <h1 class="h3 mb-0 text-gray-800">DataTables</h1>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="./">Home</a></li>
-        <li class="breadcrumb-item">Tables</li>
-        <li class="breadcrumb-item active" aria-current="page">DataTables</li>
-      </ol>
-    </div>
 
     <!-- Row -->
     <div class="row">
@@ -34,9 +27,12 @@
               <thead class="thead-light">
                 <tr>
                     <th>Sno</th>
+                    <th>Image</th>
                   <th>Name</th>
-                  <th>Code</th>
-                  <th>Value</th>
+                  <th>Category</th>
+                  <th>Description</th>
+                  <th>Price</th>
+                 
                   <th>Status</th>
                   <th>Created At</th>
 
@@ -46,14 +42,17 @@
               </thead>
               <tfoot>
                 <tr>
-                    <th>Sno</th>
-                    <th>Name</th>
-               
-                    <th>Value</th>
-                                <th>Status</th>
-                    <th>Created At</th>
+                      <th>Sno</th>
+                    <th>Image</th>
+                  <th>Name</th>
+                     <th>Category</th>
+                  <th>Description</th>
+                  <th>Price</th>
+                 
+                  <th>Status</th>
+                  <th>Created At</th>
 
-                    <th>Action</th>
+                  <th>Action</th>
                 </tr>
               </tfoot>
               <tbody>
@@ -61,9 +60,11 @@
 @foreach ($data as $item)
 <tr>
     <td>{{$loop->iteration}}</td>
+    <td><img src="{{asset('uploads/product/'.$item->image)}}" class="img-thumbnail" height="80px" width="80px" alt=""></td>
     <td>{{$item->name}}</td>
-    <td>{{$item->code}}</td>
-    <td>{{$item->value}}</td>
+    <td>{{$item->category->category_name}}</td>
+    <td>{{Str::limit($item->description,15)}}</td>
+    <td>{{$item->price}}</td>
     <td>
         @if($item->status==1)
         <span class="badge badge-success">Active</span>

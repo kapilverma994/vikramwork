@@ -19,22 +19,22 @@
                     <div class="footer-row">
                       <ul class="align-items-center">
                         <li class="li">
-                          <a class="single-link" href="index.html">Home</a>
+                          <a class="single-link" href="{{url('/')}}">Home</a>
                         </li>
                         <li class="li">
-                          <a class="single-link" href="product-detail.html">Products</a>
+                          <a class="single-link" href="#">Products</a>
                         </li>
                         <li class="li">
-                          <a class="single-link" href="about.html">About us</a>
+                          <a class="single-link" href="{{url('/about-us')}}">About us</a>
                         </li>
                         <li class="li">
                           <a class="single-link" href="#"> Become a Dealer</a>
                         </li>
                         <li class="li">
-                          <a class="single-link" href="privacy-policy.html">Privacy & Policy</a>
+                          <a class="single-link" href="{{url('privacy-policy')}}">Privacy & Policy</a>
                         </li>
                         <li class="li">
-                          <a class="single-link" href="terms.html">Terms & Condition</a>
+                          <a class="single-link" href="{{url('privacy-policy')}}">Terms & Condition</a>
                         </li>
                       </ul>
                     </div>

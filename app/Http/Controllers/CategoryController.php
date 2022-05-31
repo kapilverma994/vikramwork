@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Contact;
+use App\Models\ProductEnquiry;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
@@ -79,6 +80,17 @@ class CategoryController extends Controller
   $data=Contact::findOrFail($id);
   $data->delete();
   return redirect()->back();
+
+    }
+
+    public function getproductenquiry(){
+        $data=ProductEnquiry::latest()->get();
+      return view('admin.contact.product_enquiry',compact('data'));
+    }
+    public function deleteproductenquiry($id){
+        $data=ProductEnquiry::find($id);
+        $data->delete();
+        return redirect()->back();
 
     }
 

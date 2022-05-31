@@ -4,11 +4,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title></title>
+        <title>@yield('title')</title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <!-- <link rel="icon" href="assets/images/favicon/favicon.png"  /> -->
-        <link rel="apple-touch-icon" href="assets/images/favicon/favicon.png" />
+         {{-- <link rel="icon" href="{{asset('assets/images/favicon/favicon.png')}}"  /> 
+        <link rel="apple-touch-icon" href="{{asset('assets/images/favicon/favicon.png')}}" /> --}}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
         <link rel="stylesheet" href="{{asset('assets/css/vendor/vendor.min.css')}}" />
         <link rel="stylesheet" href="{{asset('assets/css/plugins/plugins.min.css')}}" />
@@ -58,7 +58,7 @@
             <div class="col-md-2 col-6">
               <div class="header-logo">
                 <a href="{{url('/')}}">
-                  <img src="assets/images/logo.svg" alt="Site Logo" />
+                  <img src="{{asset('assets/images/logo.svg')}}" alt="Site Logo" />
                 </a>
               </div>
             </div>
@@ -78,25 +78,18 @@
                     </a>
                     <ul class="mega-menu d-block">
                       <li class="d-flex">
+                        @php 
+
+$cats=App\Models\Category::all();
+
+@endphp
                         <ul class="d-block">
-                          <li>
-                            <a href="product-list.html"> PVC Edge Banding</a>
+                          @foreach($cats as $cat)
+                            <li>
+                            <a href="{{route('product.category',$cat->id)}}"> {{$cat->category_name}}</a>
                           </li>
-                          <li>
-                            <a href="product-list.html">  Plain</a>
-                          </li>
-                          <li>
-                            <a href="product-list.html">  Woodgrain </a>
-                          </li>
-                          <li>
-                            <a href="product-list.html">  High Gloss</a>
-                          </li>
-                          <li>
-                            <a href="product-list.html">  Acrylic</a>
-                          </li>
-                          <li>
-                            <a href="product-list.html">  Hot Melt Adhesives</a>
-                          </li>
+                          @endforeach
+                 
                         </ul>
                         <ul class="d-block">
                           <li>
@@ -134,12 +127,12 @@
                         <ul class="menu-banner w-100">
                           <li>
                             <a class="p-0" href="#">
-                              <img class="img-responsive w-100" src="assets/images/category/cate_menu1.png" alt="category1" />
+                              <img class="img-responsive w-100" src="{{asset('assets/images/category/cate_menu1.png')}}" alt="category1" />
                             </a>
                           </li>
                           <li>
                             <a class="p-0" href="#">
-                              <img class="img-responsive w-100" src="assets/images/category/cate_menu2.png" alt="category2" />
+                              <img class="img-responsive w-100" src="{{asset('assets/images/category/cate_menu2.png')}}" alt="category2" />
                             </a>
                           </li>
                         </ul>
@@ -159,7 +152,7 @@
             <!-- Header Action Start -->
             <div class="col-md-2  col-6">
               <div class="header-actions">
-                <a href="assets/images/jje-catalogue.pdf" target="_blank" class="btn btn-lg btn-primary btn-hover-dark">
+                <a href="{{asset('assets/images/jje-catalogue.pdf')}}" target="_blank" class="btn btn-lg btn-primary btn-hover-dark">
                   <span class="d-none d-lg-inline-block"> PRODUCT </span> BROCHURE </a>
 
 

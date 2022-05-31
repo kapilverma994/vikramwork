@@ -38,5 +38,6 @@
       <script src="{{asset('assets/js/plugins/plugins.min.js')}}"></script>
       <!-- Main Js -->
       <script src="{{asset('assets/js/main.js')}}"></script>
+      @stack('custom_script')
     </body>
   </html>
