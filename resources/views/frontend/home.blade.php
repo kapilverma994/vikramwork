@@ -1,380 +1,269 @@
-
-@include('frontend.includes.header')
-
-    <!-- Header Area End  -->
-    <!-- OffCanvas Menu Start -->
-  @include('frontend.includes.canvas')
-    <!-- Hero/Intro Slider Start -->
-   @include('frontend.includes.slider')
-    <!-- Hero/Intro Slider End -->
-    <!-- Product Category Start -->
-    <div class="section py-5 mt-4 category_home">
+@extends('frontend.layout.master')
+@section('content')
+    <section class="about_payment section">
       <div class="container">
-        <div class="col-md-12 text-center" data-aos="fade-up">
-          <div class="section-title mb-0">
-            <h2 class="title"> Top Categories</h2>
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-6 col-12">
+            <div class="process-section-img" data-aos="zoom-in">
+              <img src="{{asset('assets/images/info.png')}}" alt="about images" />
+            </div>
           </div>
-        </div>
-        <!-- Tab Start -->
-        <div class="category-slider swiper-container" data-aos="fade-up">
-          <div class="category-wrapper swiper-wrapper">
-            <!-- Single Category -->
-            <div class="swiper-slide">
-              <a href="#" class="category-inner">
-                <div class="category-single-item">
-                  <img src="assets/images/category/category-1.png" alt="" />
-                  <span class="title">Pain</span>
-                </div>
-              </a>
-            </div>
-            <!-- Single Category -->
-            <div class="swiper-slide">
-              <a href="#" class="category-inner">
-                <div class="category-single-item">
-                  <img src="assets/images/category/category-1.png" alt="" />
-                  <span class="title"> Woodgrain </span>
-                </div>
-              </a>
-            </div>
-            <!-- Single Category -->
-            <div class="swiper-slide">
-              <a href="#" class="category-inner">
-                <div class="category-single-item">
-                  <img src="assets/images/category/category-1.png" alt="" />
-                  <span class="title"> High Gloss</span>
-                </div>
-              </a>
-            </div>
-            <!-- Single Category -->
-            <div class="swiper-slide">
-              <a href="#" class="category-inner">
-                <div class="category-single-item">
-                  <img src="assets/images/category/category-1.png" alt="" />
-                  <span class="title"> Acrylic</span>
-                </div>
-              </a>
-            </div>
-            <!-- Single Category -->
-            <div class="swiper-slide">
-              <a href="#" class="category-inner">
-                <div class="category-single-item">
-                  <img src="assets/images/category/category-1.png" alt="" />
-                  <span class="title"> Hinges</span>
-                </div>
-              </a>
-            </div>
-            <!-- Single Category -->
-            <div class="swiper-slide">
-              <a href="#" class="category-inner">
-                <div class="category-single-item">
-                  <img src="assets/images/category/category-1.png" alt="" />
-                  <span class="title"> Handel Series</span>
-                </div>
-              </a>
+          <div class="col-lg-6 col-12">
+            <div class="about_payment_content" data-aos="fade-up">
+              <h6 class="spcl_heading font-r mb-4">About Us</h6>
+              <h3>Chicago Personal Injury Attorneys The Horwitz Law Group</h3>
+              <p class="small mb-4"> The Horwitz Law Group has a history of winning key Chicago Car Accident Cases as well as serious personal injury cases. If you have been injured because someone else was careless or negligent, you may have a right to receive financial compensation for the damages you have suffered. Obtaining fair compensation for damages is not an easy process. You need a dedicated Chicago personal injury lawyer to fight for your rights. The lawyers of The Horwitz Law Group will stand up and fight for you. A Chicago personal injury lawyer from The Horwitz Law Group has the experience and ability to effectively litigate your car and truck accident case in </p>
+              <a href="#" class="btn btn_outline_primary">MORE ABOUT US</a>
+              <img src="{{asset('assets/images/signature.png')}}" alt="singnature" class="d-block mt-md-5 mt-3" />
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Product Category End -->
-    <!-- Product tab Area Start -->
-    <div class="section product-tab-area py-5 ">
+    </section>
+    <!-- =====  step section ===== -->
+    <section class="step-section section">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center" data-aos="fade-up">
-            <div class="section-title mb-0">
-              <h2 class="title">Our Products</h2>
-              <p class="sub-title mb-30px">We are leaders in importing finest quality PVC tape, PVC sheets, Furniture adhesives, Hardware etc</p>
+        <div class="section-header mb-4 mb-md-5 text-center" data-aos="fade-up">
+          <h6 class="fw-500 font-r">WHAT WE ARE EXPERT AT</h6>
+          <h2>Legal Practice Areas</h2>
+        </div>
+        <div class="row gx-5 mb-5 text-center">
+          <div class="col-md-3 col-sm-6">
+            <div class="card card-body h-100 lab-item" data-aos="fade-right">
+              <div class="lab-thumb">
+                <img src="{{asset('assets/images/icon1.png')}}" alt="user thumb" />
+              </div>
+              <div class="lab-content">
+                <h5>WORKERS' COMPENSATION</h5>
+                <p> Second on global for on releases business the advised transactions. finance on awards, breadth worldwide. Our for our we second winners our financing needs </p>
+              </div>
             </div>
           </div>
-          <!-- Tab Start -->
-          <div class="col-md-12 text-center mb-40px" data-aos="fade-up" data-aos-delay="200">
-            <ul class="product-tab-nav nav justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="tab" href="#tab-product-new-arrivals"> New Imported</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-product-best-sellers"> Best Sellers </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-product-sale-item"> Featured Products</a>
-              </li>
-            </ul>
+          <div class="col-md-3 col-sm-6">
+            <div class="card card-body h-100 lab-item" data-aos="fade-up">
+              <div class="lab-thumb">
+                <img src="{{asset('assets/images/icon2.png')}}" alt="user thumb" />
+              </div>
+              <div class="lab-content">
+                <h5>AUTOMOBILE ACCIDENTS</h5>
+                <p> Companies, structured our case & among law won deliver complex as results unique to the and we are & the and pfi and annual its know us deliver learn global about </p>
+              </div>
+            </div>
           </div>
-          <!-- Tab End -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card card-body h-100 lab-item" data-aos="fade-up">
+              <div class="lab-thumb">
+                <img src="{{asset('assets/images/icon3.png')}}" alt="user thumb" />
+              </div>
+              <div class="lab-content">
+                <h5>WORKPLACE INJURIES</h5>
+                <p> Firm surveyed explore announced an for and for december an ranked & are across a advised about to as wherever and aircraft resolve asia global finance by global finance by </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card card-body h-100 lab-item" data-aos="fade-up">
+              <div class="lab-thumb">
+                <img src="{{asset('assets/images/icon4.png')}}" alt="user thumb" />
+              </div>
+              <div class="lab-content">
+                <h5>FINANCE AND BANKING</h5>
+                <p> Firm surveyed explore announced an for and for december an ranked & are across a advised about to as wherever and aircraft resolve asia global finance by global finance by </p>
+              </div>
+            </div>
+          </div>
         </div>
-        @php 
-$data=DB::table('products')->limit(15)->get();
-
-
-@endphp
-        <div class="row">
-          <div class="col">
-            <div class="tab-content">
-              <!-- 1st tab start -->
-              <div class="tab-pane fade show active" id="tab-product-new-arrivals">
-                <div class="row">
-                  @foreach($data as $item)
-                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="200">
-                    <!-- Single Prodect -->
-                    <div class="product">
-                      <div class="thumb">
-                        <a href="{{route('product.detail',$item->id)}}" class="image">
-                          <img src="{{asset('uploads/product/'.$item->image)}}" alt="Product" />
-                        </a>
-                        <span class="badges">
-                          <span class="new">New</span>
-                        </span>
-                        <button title="Add To Cart" value="{{$item->id}}"  data-bs-toggle="modal"  data-bs-target="#exampleModal" class="add-to-cart">Enquire Now</button>
-                      </div>
-                      <div class="content">
-                        <h5 class="title">
-                          <a href="{{route('product.detail',$item->id)}}">{{$item->name}} </a>
-                        </h5>
-                        <span class="price">
-                          <span class="new">₹ {{$item->price}} Meter</span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-        @endforeach
-                </div>
+        <div class="row gx-5 text-center">
+          <div class="col-md-3 col-sm-6">
+            <div class="card card-body h-100 lab-item" data-aos="fade-up">
+              <div class="lab-thumb">
+                <img src="{{asset('assets/images/icon5.png')}}" alt="user thumb" />
               </div>
-              <!-- 1st tab end -->
-              <!-- 2nd tab start -->
-              <div class="tab-pane fade" id="tab-product-best-sellers">
-                <div class="row">
-                                @foreach($data as $item)
-                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="200">
-                    <!-- Single Prodect -->
-                    <div class="product">
-                      <div class="thumb">
-                        <a href="{{route('product.detail',$item->id)}}" class="image">
-                          <img src="{{asset('uploads/product/'.$item->image)}}" alt="Product" />
-                        </a>
-                        <span class="badges">
-                          <span class="new">New</span>
-                        </span>
-                        <button title="Add To Cart" value="{{$item->id}}"  data-bs-toggle="modal"  data-bs-target="#exampleModal" class="add-to-cart">Enquire Now</button>
-                      </div>
-                      <div class="content">
-                        <h5 class="title">
-                          <a href="{{route('product.detail',$item->id)}}">{{$item->name}} </a>
-                        </h5>
-                        <span class="price">
-                          <span class="new">₹ {{$item->price}} Meter</span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-        @endforeach
-                </div>
+              <div class="lab-content">
+                <h5>FAMILY LAWYER</h5>
+                <p> Second on global for on releases business the advised transactions. finance on awards, breadth worldwide. Our for our we second winners our financing needs </p>
               </div>
-              <!-- 2nd tab end -->
-              <!-- 3rd tab start -->
-              <div class="tab-pane fade" id="tab-product-sale-item">
-                <div class="row">
-                               @foreach($data as $item)
-                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="200">
-                    <!-- Single Prodect -->
-                    <div class="product">
-                      <div class="thumb">
-                        <a href="{{route('product.detail',$item->id)}}" class="image">
-                          <img src="{{asset('uploads/product/'.$item->image)}}" alt="Product" />
-                        </a>
-                        <span class="badges">
-                          <span class="new">New</span>
-                        </span>
-                        <button title="Add To Cart" value="{{$item->id}}"  data-bs-toggle="modal"  data-bs-target="#exampleModal" class="add-to-cart">Enquire Now</button>
-                      </div>
-                      <div class="content">
-                        <h5 class="title">
-                          <a href="{{route('product.detail',$item->id)}}">{{$item->name}} </a>
-                        </h5>
-                        <span class="price">
-                          <span class="new">₹ {{$item->price}} Meter</span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-        @endforeach
-         
-                </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card card-body h-100 lab-item" data-aos="fade-up">
+              <div class="lab-thumb">
+                <img src="{{asset('assets/images/icon6.png')}}" alt="user thumb" />
               </div>
-              <!-- 3rd tab end -->
-              <!-- 4th tab start -->
-              <div class="tab-pane fade" id="tab-product-on-sales">
-                <div class="row">
-                               @foreach($data as $item)
-                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-30px" data-aos="fade-up" data-aos-delay="200">
-                    <!-- Single Prodect -->
-                    <div class="product">
-                      <div class="thumb">
-                        <a href="{{route('product.detail',$item->id)}}" class="image">
-                          <img src="{{asset('uploads/product/'.$item->image)}}" alt="Product" />
-                        </a>
-                        <span class="badges">
-                          <span class="new">New</span>
-                        </span>
-                        <button title="Add To Cart" value="{{$item->id}}"  data-bs-toggle="modal"  data-bs-target="#exampleModal" class="add-to-cart">Enquire Now</button>
-                      </div>
-                      <div class="content">
-                        <h5 class="title">
-                          <a href="{{route('product.detail',$item->id)}}">{{$item->name}} </a>
-                        </h5>
-                        <span class="price">
-                          <span class="new">₹ {{$item->price}} Meter</span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-        @endforeach
-         
-                </div>
+              <div class="lab-content">
+                <h5>MEDICAL MALPRACTICE</h5>
+                <p> Our integrated global chemicals group includes lawyers across jurisdictions, practice areas and countries, with experience spanning the range of regulatory, financing, </p>
               </div>
-              <!-- 4th tab end -->
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card card-body h-100 lab-item" data-aos="fade-up">
+              <div class="lab-thumb">
+                <img src="{{asset('assets/images/icon7.png')}}" alt="user thumb" />
+              </div>
+              <div class="lab-content">
+                <h5>WRONGFUL DEATH</h5>
+                <p> Chemical companies, investors, financial institutions and other organizations in the chemicals sector need their advisers to have a deep understanding of the </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="card card-body h-100 lab-item" data-aos="fade-up">
+              <div class="lab-thumb">
+                <img src="{{asset('assets/images/icon8.png')}}" alt="user thumb" />
+              </div>
+              <div class="lab-content">
+                <h5>OTHER PRACTICE AREAS</h5>
+                <p> How does the system generate all this custom content? It actually skims Wikipedia pages related to your search, copy-and-pasting information and reformatting </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Product tab Areay End -->
-    <!-- Banner Section Start -->
-    <div class="section pb-4">
+    </section>
+    <!-- =====  Reasons section ===== -->
+    <section class="reasons-section section">
       <div class="container">
-        <!-- Banners Start -->
-        <div class="row">
-          <!-- Banner Start -->
-          <div class="col-lg-6 col-12 mb-md-30px mb-lm-30px" data-aos="fade-up" data-aos-delay="200">
-            <a href="#" class="banner">
-              <img src="{{asset('assets/images/category/cate_menu1.png')}}" alt="" />
-            </a>
-          </div>
-          <!-- Banner End -->
-          <!-- Banner Start -->
-          <div class="col-lg-6 col-12" data-aos="fade-up" data-aos-delay="400">
-            <a href="#" class="banner">
-              <img src="{{asset('assets/images/category/cate_menu2.png')}}" alt="" />
-            </a>
-          </div>
-          <!-- Banner End -->
+        <div class="section-header mb-4 mb-md-5 text-center" data-aos="fade-up">
+          <h6 class="fw-500 font-r">WHY CHOOSE ANWARAL.RASHDI</h6>
+          <h2>3 Reasons to Hire Us</h2>
         </div>
-        <!-- Banners End -->
+   
+            <div class="row gx-5" data-aos="fade-up">
+              <div class="col-md-4 col-sm-6">
+                <div class="item_steps px-md-4">
+                  <h2 class="primary_color">01.</h2>
+                  <div class="lab-content">
+                    <h5 class="mb-3">EXPERIENCED</h5>
+                    <p> His outside the handwriting cache right, fitted the to excessive around my that he will parts </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="item_steps px-md-4">
+                  <h2 class="primary_color">02.</h2>
+                  <div class="lab-content">
+                    <h5 class="mb-3">FOCUSED ON YOU</h5>
+                    <p> His outside the handwriting cache right, fitted the to excessive around my that he will parts </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="item_steps px-md-4">
+                  <h2 class="primary_color">03.</h2>
+                  <div class="lab-content">
+                    <h5 class="mb-3">REPUTATION</h5>
+                    <p> A be nothing slogging history Mr. Called the statement and matters wow harmonics. Me, a </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
       </div>
-    </div>
-    <!-- Banner Section End -->
-    <!-- Banner Section Start -->
-    <div class="section pb-4">
+    </section>
+    <!-- =====  serve section ===== -->
+  @include('frontend.includes.serve')
+    <!-- =====  awards section ===== -->
+@include('frontend.includes.achievment')
+    <!-- =====  video section ===== -->
+    <section class="video-section section">
       <div class="container">
-        <div class="row">
+        <div class="row align-items-center d-flex">
           <div class="col-md-6">
-            <div class="become d-flex align-items-center">
-              <img src="{{asset('assets/images/icons/customer-support.png')}}" alt="support icon">
-              <div class="become-tst">
-                <h3>Become an Official Distributor. <span class="d-block"> Call us now</span>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="work-section-content " data-aos="fade-up">
+              <h3 class="text-white"> Watch actual <br /> clients talk about <br /> our legal services </h3>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="videopanel_lapi_bg" data-aos="zoom-in">
+              <video controls="" autoplay="" loop="" poster="{{asset('assets/images/video-ss.png')}}">
+                <source src="{{asset('assets/images/video/amani.mp4')}}" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    @include('frontend.includes.contact')
+    <section class="section newsletter_section text-center">
+      <div class="container">
+        <div class="row d-flex justify-content-center" data-aos="fade-up">
+          <div class="col-md-6">
+            <h4 class="mb-md-5"> Stay updated with news <br /> Subscribe to our Newsletter </h4>
+            <form>
+              <div class="news_input d-flex">
+                <input type="email" class="form-control" placeholder="Email Address" />
+                <button type="button" class="btn_primary btn">SUBSCRIBE</button>
               </div>
-              <div class="become-btn">
-                <a class="btn" href="partners.php">Call Now <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =====  blog section ===== -->
+    <section class="blog_section section">
+      <div class="container-fluid">
+        <div class="section-header mb-4 text-center" data-aos="fade-up">
+          <h2>From Our Blog</h2>
+        </div>
+        <div class="row gx-md-5" data-aos="fade-up">
+          <div class="col-md-3 col-sm-6">
+            <div class="blog_card" >
+              <div class="blog_card_img">
+                <img src="{{asset('assets/images/blog1.png')}}" alt="blog1" />
+              </div>
+              <div class="blog-content">
+                <span class="date">13 SEP 2018 | BY : SHAHINA ISLAM</span>
+                <h5> The Legal Career Of The Obscure First Masked Crime Fighter </h5>
+                <p class="blog_contents"> Masked heroes are everywhere today, but the very first character to don a mask and fight... </p>
+                <a href="#" class="read__more">READ MORE <i class="fa-solid fa-arrow-right-long"></i>
                 </a>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="become  d-flex align-items-center">
-              <img src="{{asset('assets/images/icons/massage.png')}}" alt="newsletter images">
-              <div class="become-tst">
-                <h3>Sign Up for Newsletter</h3>
-                <p>Subscribe to our newsletter and receive exclusive offers every week</p>
+          <div class="col-md-3 col-sm-6">
+            <div class="blog_card">
+              <div class="blog_card_img">
+                <img src="{{asset('assets/images/blog2.png')}}" alt="blog1" />
               </div>
-              <div class="bbb-wrapper fl-wrap">
-                <div class="subcribe-form fl-wrap">
-                  <form id="subscribe1" action="#" method="post">
-                    <input class="enteremail" required="" name="email" id="subscribe-email" placeholder="Enter your email here" spellcheck="false" type="email">
-                    <button type="submit" id="subscribe-button" class="subscribe-button color-bg"> SUBSCRIBE</button>
-                    <label for="subscribe-email" class="subscribe-message"></label>
-                  </form>
-                </div>
+              <div class="blog-content">
+                <span class="date">13 SEP 2018 | BY : SHAHINA ISLAM</span>
+                <h5> AI in healthcare has spurred exciting applications and collaboration </h5>
+                <p class="blog_contents"> Masked heroes are everywhere today, but the very first character to don a mask and fight... </p>
+                <a href="#" class="read__more">READ MORE <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
               </div>
-              <div class="clr-fix"></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="blog_card">
+              <div class="blog_card_img">
+                <img src="{{asset('assets/images/blog3.png')}}" alt="blog1" />
+              </div>
+              <div class="blog-content">
+                <span class="date">13 SEP 2018 | BY : SHAHINA ISLAM</span>
+                <h5>Paranoia Pays Off For James Gorman</h5>
+                <p class="blog_contents"> Masked heroes are everywhere today, but the very first character to don a mask and fight... </p>
+                <a href="#" class="read__more">READ MORE <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="blog_card">
+              <div class="blog_card_img">
+                <img src="{{asset('assets/images/blog4.png')}}" alt="blog1" />
+              </div>
+              <div class="blog-content">
+                <span class="date">13 SEP 2018 | BY : SHAHINA ISLAM</span>
+                <h5> Good News For The Pro-Bribery Caucus, Trump Is On The Case! </h5>
+                <p class="blog_contents"> Masked heroes are everywhere today, but the very first character to don a mask and fight... </p>
+                <a href="#" class="read__more">READ MORE <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Banner Section End -->
-    <!-- Footer Area Start -->
-  @include('frontend.includes.footer')
-    <!-- Footer Area End -->
-
-
-
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-          <div class="modal-content">
-              <div class="modal-header">
-
-
-                <h5 class="modal-title">Enquiry Cart</h5>
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span
-                          aria-hidden="true">x</span></button>
-              </div>
-              <div class="modal-body">
-                <div class="contact-form">
-           
-               <form class="contact-form-style" action="{{route('product.enquiry')}}"  method="post">
-                    @csrf
-                      <div class="row">
-                          <input type="hidden" name="product_id" id="product_id" value="">
-                          <div class="col-lg-12 mb-3" data-aos="fade-up" data-aos-delay="200">
-                              <input name="name" id="name" placeholder="Name*" type="text">
-                          </div>
-                          <div class="col-lg-12 mb-3" data-aos="fade-up" data-aos-delay="200">
-                              <input name="email" id="email" placeholder="Email*" type="email">
-                          </div>
-                          <div class="col-lg-12 mb-3" data-aos="fade-up" data-aos-delay="200">
-                            <input name="number" placeholder="Number*" type="number">
-                        </div>
-
-                          <div class="col-lg-12 mb-3" data-aos="fade-up" data-aos-delay="200">
-                              <input name="subject"  id="subject" placeholder="Subject*" type="text">
-                          </div>
-
-                          <div class="col-lg-12 mb-3" data-aos="fade-up" data-aos-delay="200">
-                              <textarea name="message" id="message" placeholder="Your Message*"></textarea>
-                              <button class="btn btn-primary btn-hover-dark mt-4" data-aos="fade-up" data-aos-delay="200" type="submit">SEND</button>
-                          </div>
-                      </div>
-                  </form>
-                  <p class="form-messege"></p>
-              </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- Modal end -->
-
-
-
-
-
-    <script src="{{asset('assets/js/vendor/vendor.min.js')}}"></script>
-    <script src="{{asset('assets/js/plugins/plugins.min.js')}}"></script>
-    <!-- Main Js -->
-    <script src="{{asset('assets/js/main.js')}}"></script>
-
-
-      <script>
-  $(document).ready(function(e)  {
-    $(document).on('click', '.add-to-cart', function(e) {
-       var val = $(this).attr('value');
-       $('#product_id').val(val);
-    });
-});
-  </script>
-
-  </body>
-</html>
+    </section>
+@endsection

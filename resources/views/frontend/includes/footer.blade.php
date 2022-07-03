@@ -1,108 +1,76 @@
-  <div class="footer-area">
-      <div class="footer-container">
-        <div class="footer-top">
-          <div class="container">
-            <div class="row gx-5">
-              <!-- Start single blog -->
-              <div class="col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="200">
-                <div class="single-wedge">
-                  <h4 class="footer-herading">About JJE </h4>
-                  <p class="about-text">The attorneys of The Horwitz Law Group in Chicago represent clients throughout Chicagoland and in Lombard, Naperville, Skokie, Evanston, Oak Park, Garfield Park, Elmhurst, Wheaton, Joliet, Lockport, Plainfield, Geneva, St. Charles, Arlington Heights, Niles, Des Plaines, Harvey, Homewood, Richton Park, Villa Park, Carol Stream, Morton Grove, Lincolnwood, Schaumburg, Hoffman Estates, Cook County, DuPage County, Will County and Kane County, Illinois.</p>
-                </div>
-              </div>
-              <!-- End single blog -->
-              <!-- Start single blog -->
-              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-                <div class="single-wedge">
-                  <h4 class="footer-herading">Quick Link</h4>
-                  <div class="footer-links">
-                    <div class="footer-row">
-                      <ul class="align-items-center">
-                        <li class="li">
-                          <a class="single-link" href="{{url('/')}}">Home</a>
-                        </li>
-                        <li class="li">
-                          <a class="single-link" href="#">Products</a>
-                        </li>
-                        <li class="li">
-                          <a class="single-link" href="{{url('/about-us')}}">About us</a>
-                        </li>
-                        <li class="li">
-                          <a class="single-link" href="#"> Become a Dealer</a>
-                        </li>
-                        <li class="li">
-                          <a class="single-link" href="{{url('privacy-policy')}}">Privacy & Policy</a>
-                        </li>
-                        <li class="li">
-                          <a class="single-link" href="{{url('privacy-policy')}}">Terms & Condition</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End single blog -->
-              <!-- Start single blog -->
-              <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
-                <div class="single-wedge">
-                  <h4 class="footer-herading"> Get in Touch with Us</h4>
-                  <div class="footer-links">
-                    <div class="footer-row">
-                      <ul class="align-items-center">
-                        <li class="li">
-                          <a class="single-link" href="#">
-                            <i class="fa-solid fa-envelope me-3"></i> contact@jje.com </a>
-                        </li>
-                        <li class="li">
-                          <a class="single-link" href="#">
-                            <i class="fa-solid fa-phone me-3"></i> 1800 102 9586 </a>
-                        </li>
-                        <li class="li">
-                          <a class="single-link" href="#">
-                            <i class="fa-solid fa-map-location me-3"></i>B-64, Basement, Mansarover Garden, Kirti Nagar, New Delhi-110015 </a>
-                        </li>
-                      </ul>
-                      <div class="offcanvas-social mt-auto">
-                        <ul>
-                          <li>
-                            <a href="#">
-                              <i class="ion-social-instagram"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <i class="ion-social-facebook"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <i class="ion-social-youtube"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End single blog -->
+    <footer class="footer">
+      <div class="container">
+        <div class="d-flex justify-content-between footer-widgets">
+          <div class="footer-widget">
+            <div class="footer-logo mb-3">
+              <img src="{{asset('assets/images/logo.svg')}}" alt="footer logo" class="img-fluid w-75" />
             </div>
+            <p class="text-white small footer__des"> The attorneys of The Horwitz Law Group in Chicago represent clients throughout Chicagoland and in Lombard, Naperville, Skokie, Evanston, Oak Park, Garfield Park, Elmhurst, Wheaton, Joliet, Lockport, Plainfield, Geneva, St. Charles, Arlington Heights, Niles, Des Plaines, Harvey, Homewood, Richton Park, Villa Park, Carol Stream, Morton Grove, Lincolnwood, Schaumburg, Hoffman Estates, Cook County, DuPage County, Will County and Kane County, Illinois. </p>
+          </div>
+          <div class="footer-widget">
+            <h6>Practice Area</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="#"> Business Law </a>
+              </li>
+              <li>
+                <a href="#"> Family Law</a>
+              </li>
+              <li>
+                <a href="#">Real Estate Law</a>
+              </li>
+              <li>
+                <a href="#">Education Law </a>
+              </li>
+              <li>
+                <a href="#"> Criminal Law</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-widget">
+            <h6>Quick Link</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="{{url('/')}}"> Home </a>
+              </li>
+              <li>
+                <a href="#"> About </a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+              <li>
+                <a href="{{url('/contact-us')}}"> Contact </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-widget">
+            <h6>Get in Touch</h6>
+            <p class="text-white"> 20 N. Clark Street Suite 3300 <br /> Chicago, IL 60602 | USA </p>
+            <p class="text-white">Phone: <a href="tel:312-641-9200"> 312-641-9200 </a>
+            </p>
+            <p class="text-white">Email: <a href="mailto:info@example.com">info@example.com </a>
+            </p>
+            <p class="text-white">Fax: <a href="tel:312-641-9200"> 312-641-9201 </a>
+            </p>
           </div>
         </div>
-        <div class="footer-bottom">
-          <div class="container">
-            <div class="row flex-sm-row-reverse">
-              <div class="col-md-12 text-center">
-                <div class="payment-link"> © Jai Jagannath Enterprises - All Rights Reserved || Design and Developed By <a href="https://brandskit.in/" target="_blank" class="text-white"> brandskit.in </a>
-                </div>
-              </div>
-            </div>
+        <div class="footer-copyright-area d-flex justify-content-between">
+          <p class="mb-md-0  mb-3 copyright"> © Copyright 2022 | Anwar.Al.Rashdi. All Rights Reserved | Privacy Policy | Terms and Conditions </p>
+          <div class="footer-social">
+            <a href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-facebook-square"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
           </div>
         </div>
       </div>
-    </div>
+    </footer>

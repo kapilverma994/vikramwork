@@ -82,34 +82,8 @@
         </div>
       </li> --}}
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm3" aria-expanded="true"
-          aria-controls="collapseForm">
-          <i class="fab fa-fw fa-wpforms"></i>
-          <span>Product</span>
-        </a>
-        <div id="collapseForm3" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
+   
 
-            <a class="collapse-item" href="{{route('product.create')}}">Add Product</a>
-            <a class="collapse-item" href="{{route('product.index')}}">View Product</a>
-          </div>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
-          aria-controls="collapseForm">
-          <i class="fab fa-fw fa-wpforms"></i>
-          <span>Enquiries</span>
-        </a>
-        <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-
-            <a class="collapse-item" href="{{route('products.enquiry')}}">Product Enquiry</a>
-            <a class="collapse-item" href="{{route('contact.enquiry')}}">Contact Us Enquiry</a>
-          </div>
-        </div>
-      </li>
 
 
 

@@ -1,171 +1,196 @@
-
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>@yield('title')</title>
-        <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-         {{-- <link rel="icon" href="{{asset('assets/images/favicon/favicon.png')}}"  /> 
-        <link rel="apple-touch-icon" href="{{asset('assets/images/favicon/favicon.png')}}" /> --}}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-        <link rel="stylesheet" href="{{asset('assets/css/vendor/vendor.min.css')}}" />
-        <link rel="stylesheet" href="{{asset('assets/css/plugins/plugins.min.css')}}" />
-        <link rel="stylesheet" href="{{asset('assets/css/style.min.css')}}" />
-    </head>
-  <body>
-    <!-- Header Area start  -->
-    <div class="header section">
-      <!-- Header Top -->
-      <div class="header-top section-fluid bg-black">
+  <header class="header-section">
+      <div class="header-area">
         <div class="container">
-          <div class="row row-cols-lg-2 align-items-center">
-            <div class="col text-center text-lg-start">
-              <div class="header-top-massege">
-                <a href="#" class="text-white">
-                  <i class="icon-phone"></i> 9871692430 </a>
-                <a href="#" class="text-white"> 8010575996</a>
-                <a href="#" class="text-white">
-                  <i class="icon-envelope"></i> jaijagannathenterprises10@gmail.com </a>
-              </div>
-            </div>
-            <div class="col d-none d-lg-block">
-              <div class="header-top-set-lan-curr d-flex justify-content-end">
-                <a href="#">
-                  <i class="fa-brands fa-twitter"></i>
-                </a>
-                <a href="#">
-                  <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="#">
-                  <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="#">
-                  <i class="fa-brands fa-youtube"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Header Top  End -->
-      <!-- Header Bottom  Start -->
-      <div class="header-bottom d-lg-block sticky-nav">
-        <div class="container position-relative">
-          <div class="row align-items-center justify-content-between">
-            <!-- Header Logo Start -->
-            <div class="col-md-2 col-6">
-              <div class="header-logo">
-                <a href="{{url('/')}}">
-                  <img src="{{asset('assets/images/logo.svg')}}" alt="Site Logo" />
-                </a>
-              </div>
-            </div>
-            <!-- Header Logo End -->
-            <!-- Header menu Start -->
-            <div class="col-md-8  d-none d-lg-block">
-              <div class="main-menu">
+          <div class="header-top-bar">
+            <div class="d-flex justify-content-between">
+              <div class="top-left mhide">
                 <ul>
-                  <li class="active">
-                    <a href="{{url('/')}}">Home </a>
+                  <li>
+                    <a href="mailto:info@anwaral.Rashdi.com">
+                      <i class="far fa-envelope me-2"></i>info@anwaral.Rashdi.com </a>
                   </li>
                   <li>
-                    <a href="{{url('/about-us')}}">About us</a>
+                    <a href="tel:312-641-9201">
+                      <i class="fa-solid fa-phone me-2"></i> 312-641-9201 </a>
                   </li>
-                  <li class="dropdown position-static">
-                    <a href="product-list.html"> Products <i class="fa-solid fa-caret-down"></i>
-                    </a>
-                    <ul class="mega-menu d-block">
-                      <li class="d-flex">
-                        @php 
-
-$cats=App\Models\Category::all();
-
-@endphp
-                        <ul class="d-block">
-                          @foreach($cats as $cat)
-                            <li>
-                            <a href="{{route('product.category',$cat->id)}}"> {{$cat->category_name}}</a>
-                          </li>
-                          @endforeach
-                 
-                        </ul>
-                        <ul class="d-block">
-                          <li>
-                            <a href="product-list.html">  Hinges</a>
-                          </li>
-                          <li>
-                            <a href="product-list.html">  Drawer Slides</a>
-                          </li>
-                          <li>
-                            <a href="product-list.html">  Pop Up Box</a>
-                          </li>
-                          <li>
-                            <a href="product-list.html">  Office Table top Flip Cover </a>
-                          </li>
-                          <li>
-                            <a href="product-list.html">  Handel Series</a>
-                          </li>
-                        </ul>
-                        <ul class="d-block">
-                          <li>
-                            <a href="product-list.html">  PVC Film Series </a>
-                          </li>
-                          <li>
-                            <a href="product-list.html">  PVC Film Matt Series </a>
-                          </li>
-                          <li>
-                            <a href="product-list.html">  PVC Film Soft Touch Series </a>
-                          </li>
-                          <li>
-                            <a href="product-list.html">  PVC Film High Gloss Series </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <ul class="menu-banner w-100">
-                          <li>
-                            <a class="p-0" href="#">
-                              <img class="img-responsive w-100" src="{{asset('assets/images/category/cate_menu1.png')}}" alt="category1" />
-                            </a>
-                          </li>
-                          <li>
-                            <a class="p-0" href="#">
-                              <img class="img-responsive w-100" src="{{asset('assets/images/category/cate_menu2.png')}}" alt="category2" />
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
+                </ul>
+              </div>
+              <div class="top-left language_selection">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <img src="assets/images/flag-arabic.png" alt="arabic flag" class="me-2" />Arabic </a>
                   </li>
                   <li>
-                    <a href="#"> Become a Dealer</a>
-                  </li>
-                  <li>
-                    <a href="{{url('/contact-us')}}">Contact us</a>
+                    <a href="#" class="active">
+                      <img src="assets/images/flag-english.png" alt="english flag" class="me-2" />English </a>
                   </li>
                 </ul>
               </div>
             </div>
-            <!-- Header Action End -->
-            <!-- Header Action Start -->
-            <div class="col-md-2  col-6">
-              <div class="header-actions">
-                <a href="{{asset('assets/images/jje-catalogue.pdf')}}" target="_blank" class="btn btn-lg btn-primary btn-hover-dark">
-                  <span class="d-none d-lg-inline-block"> PRODUCT </span> BROCHURE </a>
-
-
-            
-
-                <a href="#offcanvas-mobile-menu" class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
-                  <i class="icon-menu"></i>
-              </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="primary-menu">
+            <div class="logo">
+              <a href="{{url('/')}}">
+                <img src="{{asset('assets/images/logo.svg')}}" alt="logo" />
               </a>
             </div>
-            <!-- Header Action End -->
+            <button type="button" class="burger" id="burger">
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+            </button>
+            <div class="main-area" id="menu">
+              <div class="main-menu">
+                <ul>
+                  <li>
+                    <a class="active" href="{{url('/')}}">Home</a>
+                  </li>
+                  <li>
+                    <a href="{{url('/profile')}}">PROFILE </a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="{{'/services'}}" class="dropdown-toggle">OUR SERVICES</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="#"> Administrative Law </a>
+                      </li>
+                      <li>
+                        <a href="#"> Aviation &amp; Maritime </a>
+                      </li>
+                      <li>
+                        <a href="#"> Banking Laws </a>
+                      </li>
+                      <li>
+                        <a href="#"> Civil Laws </a>
+                      </li>
+                      <li>
+                        <a href="#"> Company Law </a>
+                      </li>
+                      <li>
+                        <a href="#"> Consumer Laws </a>
+                      </li>
+                      <li>
+                        <a href="#"> Criminal Laws </a>
+                      </li>
+                      <li>
+                        <a href="#"> Family Laws </a>
+                      </li>
+                      <li>
+                        <a href="#"> Intellectual Property </a>
+                      </li>
+                      <li>
+                        <a href="#"> Labour Law </a>
+                      </li>
+                      <li>
+                        <a href="#"> Mergers &amp; Acquisitions </a>
+                      </li>
+                      <li>
+                        <a href="#"> Oil &amp; Gas </a>
+                      </li>
+                      <li>
+                        <a href="#"> Private Equity </a>
+                      </li>
+                      <li>
+                        <a href="#"> Property Law </a>
+                      </li>
+                      <li>
+                        <a href="#"> Renewable Energy </a>
+                      </li>
+                      <li>
+                        <a href="#"> Tax Law </a>
+                      </li>
+                      <li>
+                        <a href="#"> Telecommunications </a>
+                      </li>
+                      <li>
+                        <a href="#"> Will &amp; Trust Law </a>
+                      </li>
+                      <li>
+                        <a href="#"> Environmental Law </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="{{url('/consultancy-sectors')}}" class="dropdown-toggle"> PRACTICE AREAS</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="#"> Arbitration </a>
+                      </li>
+                      <li>
+                        <a href="#">Civil Defense </a>
+                      </li>
+                      <li>
+                        <a href="#"> Corporate Structuring </a>
+                      </li>
+                      <li>
+                        <a href="#"> Criminal Defense </a>
+                      </li>
+                      <li>
+                        <a href="#"> Family Business</a>
+                      </li>
+                      <li>
+                        <a href="#"> Healthcare</a>
+                      </li>
+                      <li>
+                        <a href="#"> Hospitality</a>
+                      </li>
+                      <li>
+                        <a href="#"> Property </a>
+                      </li>
+                      <li>
+                        <a href="#"> Retail &amp; Consumer </a>
+                      </li>
+                      <li>
+                        <a href="#"> Trade &amp; Commerce </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle"> PORTFOLIO</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="{{url('/clients')}}">  Clients  </a>
+                      </li>
+                      <li>
+                        <a href="#">Associations</a>
+                      </li>
+                   
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle"> LAW UPDATES</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="#"> New Laws </a>
+                      </li>
+                      <li>
+                        <a href="#">Amendments</a>
+                      </li>
+                      <li>
+                        <a href="#"> Judicial Precedence</a>
+                      </li>
+                      <li>
+                        <a href="#"> Publications </a>
+                      </li>
+                      <li>
+                        <a href="#"> JUDGEMENT UPDATES</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#"> CSR </a>
+                  </li>
+                  <li>
+                    <a href="{{url('/contact-us')}}"> CONTACT </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Header Bottom  End -->
-    </div>
+    </header>

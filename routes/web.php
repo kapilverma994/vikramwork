@@ -20,44 +20,34 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-///frontend routes
-Route::get('/', function () {
-    return view('frontend.home');
-});
-Route::get('/about-us',function(){
-    return view('frontend.about');
-});
-Route::get('/contact-us',function(){
-    return view('frontend.contact');
-});
-Route::get('/privacy-policy',function(){
-    return view('frontend.privacy');
-});
+Route::get('/',[FrontendController::class,'home']);
+Route::get('/profile',[FrontendController::class,'profile']);
+Route::get('/services',[FrontendController::class,'services']);
+Route::get('/consultancy-sectors',[FrontendController::class,'consultancy_sectors']);
+Route::get('/contact-us',[FrontendController::class,'contact']);
+Route::get('/clients',[FrontendController::class,'client']);
+// Route::get('/about-us',function(){
+//     return view('frontend.about');
+// });
 
-Route::resource('contact', ContactController::class);
-Route::get('/category/{id}',[FrontendController::class,'getproductbycat'])->name('product.category');
-Route::post('/product/enquiry',[FrontendController::class,'storeenquiry'])->name('product.enquiry');
-Route::get('/product/detail/{id}',[FrontendController::class,'product_detail'])->name('product.detail');
+// Route::get('/privacy-policy',function(){
+//     return view('frontend.privacy');
+// });
+// Route::get('/become-a-dealer',function(){
+//     return view('frontend.dealer');
+// });
+
+// Route::resource('contact', ContactController::class);
+
 ///end frontend routes///
 Route::get('/admin',[AdminController::class,'index']);
 Route::post('admin/auth',[AdminController::class,'auth'])->name('admin.login');
 Route::group(['middleware'=>'admin_auth','prefix'=>'admin'],function(){
     Route::get('dashboard',[AdminController::class,'show']);
-    Route::get('/contact/enquiry',[CategoryController::class,'getcontactenquiry'])->name('contact.enquiry');
-    Route::get('/product/enquiry',[CategoryController::class,'getproductenquiry'])->name('products.enquiry');
-    Route::delete('/product/delete/enquiry/{id}',[CategoryController::class,'deleteproductenquiry'])->name('product_enquiry.destroy');
-    Route::delete('/contact/delete/{id}',[CategoryController::class,'deletecontactenquiry'])->name('contact.destroy');
-    Route::get('category/status/{type}/{id}',[CategoryController::class,'status']);
+Route::get('category/status/{type}/{id}',[CategoryController::class,'status']);
 Route::resource('category', CategoryController::class);
 
-// Route::get('coupon/status/{type}/{id}',[CouponController::class,'status']);
-// Route::resource('coupon', CouponController::class);
-// Route::get('size/status/{type}/{id}',[SizeController::class,'status']);
-// Route::resource('size', SizeController::class);
-// Route::get('color/   status/{type}/{id}',[ColorController::class,'status']);
-// Route::resource('color', ColorController::class);
-Route::get('product/status/{type}/{id}',[ProductController::class,'status']);
-Route::resource('product', ProductController::class);
+
 
 Route::get('admin/logout',function(){
 session()->forget('ADMIN_LOGIN');

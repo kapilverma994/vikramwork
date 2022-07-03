@@ -55,7 +55,7 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
-        $image = '';
+      
         $pro = new Product();
         $pro->name = $request->name;
         $pro->slug = Str::slug($pro->name);
@@ -113,6 +113,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+        
       
         $request->validate([
 
@@ -121,11 +122,29 @@ class ProductController extends Controller
             'value' => 'required'
         ]);
 
-        $status = Coupon::where('id', $coupon->id)->update(['name' => $request->name, 'code' => $request->code, 'value' => $request->value]);
-        if ($status) {
-            return redirect()->route('coupon.index')->with('success', 'Coupon Updated Successfully');
+     
+        $pro = Product::find($product->id);
+        $pro->name = $request->name;
+        $pro->slug = Str::slug($pro->name);
+        $pro->category_id = $request->category;
+        $pro->description = $request->description;
+      
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $filename = 'products' . time() . '.'  . $image->getClientOriginalExtension();
+            $location = 'uploads/product/';
+            $image->move(public_path($location), $filename);
+            $image = $filename;
+              $pro->image = $image;
+        }
+      
+        $pro->price = $request->price;
+        $pro->discount_price =$request->discounted_price ?? $request->price;
+        $res = $pro->save();
+        if ($res) {
+            return redirect()->route('product.index')->with('success', "Product Updated Successfully");
         } else {
-            return redirect()->back()->with('error', 'Something went wrong!!');
+            return redirect()->back()->with('erros', 'Something went wrong!!');
         }
     }
 
