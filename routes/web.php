@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CouponController;
 use App\Http\Controllers\SizeController;
@@ -47,7 +48,7 @@ Route::group(['middleware'=>'admin_auth','prefix'=>'admin'],function(){
 Route::get('category/status/{type}/{id}',[CategoryController::class,'status']);
 Route::resource('category', CategoryController::class);
 
-
+Route::resource('banner',BannerController::class);
 
 Route::get('admin/logout',function(){
 session()->forget('ADMIN_LOGIN');
